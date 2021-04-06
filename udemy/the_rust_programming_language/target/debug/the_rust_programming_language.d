@@ -1,0 +1,1 @@
+/home/rodrigo/Projects/Rust/Learning/udemy/the_rust_programming_language/target/debug/the_rust_programming_language: /home/rodrigo/Projects/Rust/Learning/udemy/the_rust_programming_language/src/main.rs
