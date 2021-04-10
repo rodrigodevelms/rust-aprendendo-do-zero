@@ -20,7 +20,7 @@ fn stack_and_heap() {
 enum State {
     Locked,
     Failed,
-    Unlocked
+    Unlocked 
 }
 
 fn lock_unlock() {
@@ -40,7 +40,7 @@ fn lock_unlock() {
                 }
                 if entry == code {
                     state = State::Unlocked;
-                    continue;
+                    continue;   
                 }
                 if !code.starts_with(&entry) {
                     state = State::Failed;
