@@ -4,7 +4,7 @@ use std::mem;
 use std::io::stdin;
 
 fn main() {
-    lock_unlock()
+    slices()
 }
 
 fn stack_and_heap() {
@@ -59,4 +59,24 @@ fn lock_unlock() {
             }
         }
     }
+}
+
+fn arrays() {
+    let array_one = [1u64; 10];
+    println!("All numbers in array_one {:?}", array_one);
+    for i in 0..array_one.len() {
+        println!("This is in for loop: Index = {} and Value = {}", i, array_one[i]);
+    }
+    println!("The ammount of memory in bytes, consumming by array_one = {}", mem::size_of_val(&array_one))
+} 
+
+fn slices() {
+    let array_two = [10, 11, 12, 13, 14, 15];
+
+    fn use_slice(slice: &[i32])
+    {
+        println!("Begin with {} and the length is {}, and the entiry array is {:?}", slice[0], slice.len(), slice);
+    }
+
+    use_slice(&array_two[2..6])
 }
